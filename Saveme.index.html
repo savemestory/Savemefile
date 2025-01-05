@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Story</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f3a7ff, #fb5e6b, #f8c106, #f02b8f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            width: 320px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+        .form-container .header-message {
+            text-align: center;
+            font-size: 16px;
+            color: black;
+            margin-bottom: 20px;
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #3897f0;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 18px;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #0078e7;
+        }
+        .form-container .footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+            color: #333;
+        }
+        .form-container .footer p {
+            font-style: italic;
+            color: #555;
+        }
+        .form-container input[type="text"], .form-container select, .form-container textarea {
+            color: black; /* Change text color for these fields */
+        }
+        .form-container textarea {
+            font-size: 16px;
+            height: 200px; /* Larger story section */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <!-- Header Message: All stories are anonymous -->
+        <div class="header-message">
+            <p><strong>All stories are anonymous.</strong></p>
+        </div>
+
+        <h2>Share Your Story</h2>
+
+        <!-- Formspree Form -->
+        <form action="https://formspree.io/f/xzzzkvwl" method="POST">
+            <!-- Title Input -->
+            <input type="text" id="title" name="title" placeholder="Title of your story" required><br>
+
+            <!-- Age Input -->
+            <input type="number" id="age" name="age" placeholder="Age" required><br>
+
+            <!-- Gender Input (Optional) -->
+            <label for="gender" style="color: black;">Gender (optional):</label><br>
+            <input type="text" id="gender" name="gender" placeholder="Your gender (optional)"><br><br>
+
+            <!-- Story Input (Larger Section) with black color -->
+            <label for="story" style="color: black;">Share your story:</label><br>
+            <textarea id="story" name="story" rows="8" placeholder="Share your experience to find a solution, inspire others or simply make the world aware. All are welcome." required></textarea><br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="footer">
+            <p><strong>All stories remain anonymous.</strong></p>
+            <p><i>Please feel safe in sharing your story. I hope we can help you and inspire others.</i></p>
+        </div>
+    </div>
+
+</body>
+</html>
